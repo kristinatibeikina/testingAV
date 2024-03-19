@@ -1,5 +1,5 @@
-describe('Role Tests',()=>{
-  it('negative role test', ()=>{
+describe('Negative Role Student Tests',()=>{
+  it('negative role student test', ()=>{
     cy.fixture('example').then(data=>{
       cy.log('Переход на сайт')
       cy.visit(data.main_url)
