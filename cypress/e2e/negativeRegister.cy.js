@@ -1,4 +1,4 @@
-describe('Registration Tests',()=>{
+describe('Negative registration Tests',()=>{
   it('negative registration test', ()=>{
     cy.fixture('example').then(data=>{
       cy.log('Переход на сайт')
