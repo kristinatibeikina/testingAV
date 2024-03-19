@@ -1,5 +1,5 @@
-describe('Registration Tests',()=>{
-  it('positive registration test', ()=>{
+describe('Authorization Tests',()=>{
+  it('positive authorization test', ()=>{
     cy.fixture('example').then(data=>{
       cy.log('Переход на сайт')
       cy.visit(data.main_url)
