@@ -21,9 +21,8 @@ describe('Negative registration Tests',()=>{
       cy.log('Повтор пароля')
       cy.get(':nth-child(4) > .form-control--medium > .form-input--password')
         .type(data.existent_password)
-
-      cy.get('.form__buttons > :nth-child(4)').should('be.visible').click()
-
+        
+      cy.get('.form__buttons > :nth-child(4)').should('be.disabled').click()
 
       cy.get(':nth-child(1) > .form-error > span').should('contain','Обязательное поле, символы латиницы, не содержит пробелы')
 
@@ -32,6 +31,8 @@ describe('Negative registration Tests',()=>{
       cy.get(':nth-child(3) > .form-error > span').should('contain','Обязательное поле, мин 6 символов, должен содержать буквы в верхнем и нижнем регистре, минимум 1 цифру, не содержать пробелы')
 
       cy.get(':nth-child(4) > .form-error > span').should('contain','Пароли не совпадают')
+
+      
     })
   })
 })

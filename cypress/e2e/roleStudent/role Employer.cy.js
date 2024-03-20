@@ -40,6 +40,7 @@ describe('Role Employer Tests',()=>{
       
       cy.get('.create-company-form__description-block > .button').should('be.visible').click()
 
+      cy.url().should('include','/account/main')
       
     })
   })

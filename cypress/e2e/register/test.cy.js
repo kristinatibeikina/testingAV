@@ -37,6 +37,8 @@ describe('Registration Tests',()=>{
         .type(data.existent_patronymic)
 
       cy.get('.form__buttons > :nth-child(3)').should('be.visible').click()
+
+      cy.url().should('include','/account/main')
     })
   })
 })

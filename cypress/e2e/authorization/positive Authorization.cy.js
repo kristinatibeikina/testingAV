@@ -15,6 +15,8 @@ describe('Authorization Tests',()=>{
         .type(data.existent_password)
 
       cy.get('.form__buttons > :nth-child(3)').should('be.visible').click()
+
+      cy.url().should('include','/account/main')
     })
   })
 })
